@@ -32,32 +32,27 @@ class TimerBloc extends Bloc<TimerEvent, TimerState> {
   // Start the timer
   void _onStarted(TimerStartedEvent event, Emitter<TimerState> emit) {
     emit(TimerRunInProgressState(event.duration));
-    _tickerSubscription?.cancel();
-    _tickerSubscription = _ticker
-        .tick(ticks: event.duration)
-        .listen((duration) => add(_TimerTickedEvent(duration: duration)));
+    // TODO: stop the previous timer
+    // TODO: start a new timer
   }
 
   // Pause the timer
   void _onPaused(TimerPausedEvent event, Emitter<TimerState> emit) {
     if (state is TimerRunInProgressState) {
-      _tickerSubscription?.pause();
-      emit(TimerRunPauseState(state.duration));
+      // TODO : pause the timer
     }
   }
 
   // Resume the timer
   void _onResumed(TimerResumedEvent event, Emitter<TimerState> emit) {
     if (state is TimerRunPauseState) {
-      _tickerSubscription?.resume();
-      emit(TimerRunInProgressState(state.duration));
+      // TODO : resume the timer
     }
   }
 
   // Reset the timer
   void _onReset(TimerResetEvent event, Emitter<TimerState> emit) {
-    _tickerSubscription?.cancel();
-    emit(const TimerInitialState(_duration));
+    // TODO : reset the timer
   }
 
   // On each tick of the timer

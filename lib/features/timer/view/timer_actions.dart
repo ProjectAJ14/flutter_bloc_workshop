@@ -19,9 +19,9 @@ class TimerActions extends StatelessWidget {
               TimerInitialState() => [
                   FloatingActionButton(
                     child: const Icon(Icons.play_arrow),
-                    onPressed: () => context
-                        .read<TimerBloc>()
-                        .add(TimerStartedEvent(duration: state.duration)),
+                    onPressed: () {
+                      // TODO: Start the timer
+                    },
                   ),
                 ],
 
@@ -29,13 +29,15 @@ class TimerActions extends StatelessWidget {
               TimerRunInProgressState() => [
                   FloatingActionButton(
                     child: const Icon(Icons.pause),
-                    onPressed: () =>
-                        context.read<TimerBloc>().add(const TimerPausedEvent()),
+                    onPressed: () {
+                      // TODO: Pause the timer
+                    },
                   ),
                   FloatingActionButton(
                     child: const Icon(Icons.replay),
-                    onPressed: () =>
-                        context.read<TimerBloc>().add(const TimerResetEvent()),
+                    onPressed: () {
+                      // TODO: Reset the timer
+                    },
                   ),
                 ],
 
@@ -43,14 +45,15 @@ class TimerActions extends StatelessWidget {
               TimerRunPauseState() => [
                   FloatingActionButton(
                     child: const Icon(Icons.play_arrow),
-                    onPressed: () => context
-                        .read<TimerBloc>()
-                        .add(const TimerResumedEvent()),
+                    onPressed: () {
+                      // TODO: Resume the timer
+                    },
                   ),
                   FloatingActionButton(
                     child: const Icon(Icons.replay),
-                    onPressed: () =>
-                        context.read<TimerBloc>().add(const TimerResetEvent()),
+                    onPressed: () {
+                      // TODO: Reset the timer
+                    },
                   ),
                 ],
 
@@ -58,8 +61,9 @@ class TimerActions extends StatelessWidget {
               TimerRunCompleteState() => [
                   FloatingActionButton(
                     child: const Icon(Icons.replay),
-                    onPressed: () =>
-                        context.read<TimerBloc>().add(const TimerResetEvent()),
+                    onPressed: () {
+                      // TODO: Reset the timer
+                    },
                   ),
                 ]
             },
