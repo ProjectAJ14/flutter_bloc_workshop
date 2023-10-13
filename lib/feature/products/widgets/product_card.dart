@@ -48,16 +48,22 @@ class ProductCard extends StatelessWidget {
           ),
           Text(
             product.title,
-            style: Theme.of(context).textTheme.headlineSmall,
+            style: Theme.of(context).textTheme.titleMedium,
+            maxLines: 2,
+            textAlign: TextAlign.center,
           ),
+          const SizedBox(height: 8),
           ElevatedButton(
             onPressed: addToCart,
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all(
-                Colors.white,
+                Colors.green.shade300,
               ),
             ),
-            child: const Text('Add to cart'),
+            child: const Text(
+              'Add to cart',
+              style: TextStyle(color: Colors.white),
+            ),
           ),
         ],
       ),

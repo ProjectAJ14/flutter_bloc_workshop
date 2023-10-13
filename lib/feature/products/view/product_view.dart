@@ -26,7 +26,7 @@ class ProductView extends StatelessWidget {
             itemCount: state.products.length,
             gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
               maxCrossAxisExtent: 240,
-              childAspectRatio: 0.65,
+              childAspectRatio: 0.6,
             ),
             itemBuilder: (context, index) {
               final product = state.products[index];
