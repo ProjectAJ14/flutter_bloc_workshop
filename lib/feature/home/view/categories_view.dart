@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
+import '../../../app/route/routes/route_path.dart';
 import '../bloc/categories_bloc.dart';
 import '../widgets/categories_card.dart';
 
@@ -34,7 +36,10 @@ class CategoriesView extends StatelessWidget {
 
               return CategoryCard(
                 onTap: () {
-                  // Handle category tap
+                  context.goNamed(
+                    RoutePath.productDetails,
+                    pathParameters: {"category": category},
+                  );
                 },
                 categoryName: category,
               );
