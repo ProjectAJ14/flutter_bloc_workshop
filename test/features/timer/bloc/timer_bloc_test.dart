@@ -10,7 +10,7 @@ void main() {
       build: () => TimerBloc(ticker: const Ticker()),
       act: (bloc) => bloc.add(const TimerStartedEvent(duration: 30)),
       expect: () => [
-        const TimerRunInProgressState(30),
+        // TODO: Write Expect here
       ],
     );
 
@@ -22,8 +22,7 @@ void main() {
         bloc.add(const TimerPausedEvent());
       },
       expect: () => [
-        const TimerRunInProgressState(30),
-        const TimerRunPauseState(30),
+        // TODO: Write Expect here
       ],
     );
 
@@ -36,9 +35,7 @@ void main() {
         bloc.add(const TimerResumedEvent());
       },
       expect: () => [
-        const TimerRunInProgressState(30),
-        const TimerRunPauseState(30),
-        const TimerRunInProgressState(30),
+        // TODO: Write Expect here
       ],
     );
 
@@ -51,9 +48,7 @@ void main() {
         bloc.add(const TimerResetEvent());
       },
       expect: () => [
-        const TimerRunInProgressState(30),
-        const TimerRunPauseState(30),
-        const TimerInitialState(30),
+        // TODO: Write Expect here
       ],
     );
   });

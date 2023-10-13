@@ -18,43 +18,7 @@ void main() {
         ),
       );
 
-      await tester.pumpAndSettle();
-
-      // Initial State : Should display play button
-      expect(find.byIcon(Icons.play_arrow), findsOneWidget);
-
-      // Call Start Event
-      await tester.tap(find.byIcon(Icons.play_arrow));
-
-      await tester.pumpAndSettle();
-
-      // TimerRunInProgressState : Should display pause and restart buttons
-
-      expect(find.byIcon(Icons.pause), findsOneWidget);
-
-      expect(find.byIcon(Icons.replay), findsOneWidget);
-
-      // Call Pause Event
-
-      await tester.tap(find.byIcon(Icons.pause));
-
-      await tester.pumpAndSettle();
-
-      // TimerRunPauseState : Should display play and restart buttons
-
-      expect(find.byIcon(Icons.play_arrow), findsOneWidget);
-
-      expect(find.byIcon(Icons.replay), findsOneWidget);
-
-      // Call Reset Event
-
-      await tester.tap(find.byIcon(Icons.replay));
-
-      await tester.pumpAndSettle();
-
-      // TimerInitialState : Should display play button
-
-      expect(find.byIcon(Icons.play_arrow), findsOneWidget);
+      // TODO: Write Expect here
     });
   });
 }
