@@ -28,7 +28,7 @@ class HomeScreen extends StatelessWidget {
                   onTap: () {
                     context.goNamed(
                       RoutePath.productDetails,
-                      pathParameters: {"category": "all"},
+                      pathParameters: {"category": "All"},
                     );
                   },
                   categoryName: "All",

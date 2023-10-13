@@ -17,7 +17,7 @@ final router = GoRouter(
           path: "${RoutePath.productDetails}/:category",
           name: RoutePath.productDetails,
           builder: (context, state) => ProductScreen(
-            category: state.pathParameters["category"],
+            category: state.pathParameters["category"] ?? "All",
           ),
         ),
       ],
