@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_workshop/features/counter/cubit/counter_cubit.dart';
 
+/// A widget that displays the current count and provides buttons to
+/// increment and decrement it.
 class CounterView extends StatelessWidget {
   const CounterView({super.key});
 
