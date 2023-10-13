@@ -1,8 +1,6 @@
 name: flutter_bloc_workshop
 description: A new Flutter project.
-
 publish_to: "none"
-
 version: 1.0.0+1
 
 environment:
@@ -15,15 +13,10 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_bloc: ^8.1.3
   bloc: ^8.1.2
-  get_it: ^7.6.4
-  equatable: ^2.0.5
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  bloc_test: ^9.1.4
-  mocktail: ^1.0.0
-
   flutter_lints: ^2.0.0
 
 flutter:
