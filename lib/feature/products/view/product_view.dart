@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../bloc/product_bloc.dart';
+import '../dialog/add_to_cart_dialog.dart';
 import '../widgets/product_card.dart';
 
 class ProductView extends StatelessWidget {
@@ -26,7 +27,9 @@ class ProductView extends StatelessWidget {
               final product = state.products[index];
               return ProductCard(
                 product: product,
-                addToCart: () {},
+                addToCart: () {
+                  addToCartDialog(context);
+                },
               );
             },
           );
