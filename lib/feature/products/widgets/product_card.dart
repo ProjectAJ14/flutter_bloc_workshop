@@ -5,23 +5,35 @@ import '../../../data/models/product_model.dart';
 class ProductCard extends StatelessWidget {
   final ProductModel product;
 
+  final Function() addToCart;
+
   const ProductCard({
     Key? key,
     required this.product,
+    required this.addToCart,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        // Navigate to product details page
-      },
-      child: Card(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Image.network(product.image),
-            Row(
+    return Card(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          ClipRRect(
+            borderRadius: const BorderRadius.only(
+              topLeft: Radius.circular(10),
+              topRight: Radius.circular(10),
+            ),
+            child: Image.network(
+              product.image,
+              height: 150,
+              width: double.infinity,
+              fit: BoxFit.fitWidth,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
@@ -33,15 +45,21 @@ class ProductCard extends StatelessWidget {
                 Text('\$${product.price.toStringAsFixed(2)}'),
               ],
             ),
-            Text(product.title),
-            ElevatedButton(
-              onPressed: () {
-                // Add to cart
-              },
-              child: const Text('Add to cart'),
+          ),
+          Text(
+            product.title,
+            style: Theme.of(context).textTheme.headlineSmall,
+          ),
+          ElevatedButton(
+            onPressed: addToCart,
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(
+                Colors.white,
+              ),
             ),
-          ],
-        ),
+            child: const Text('Add to cart'),
+          ),
+        ],
       ),
     );
   }

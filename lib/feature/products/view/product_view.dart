@@ -16,12 +16,17 @@ class ProductView extends StatelessWidget {
             child: CircularProgressIndicator(),
           );
         } else if (state is ProductLoadedState) {
-          return ListView.builder(
+          return GridView.builder(
             itemCount: state.products.length,
+            gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+              maxCrossAxisExtent: 240,
+              childAspectRatio: 0.65,
+            ),
             itemBuilder: (context, index) {
               final product = state.products[index];
               return ProductCard(
                 product: product,
+                addToCart: () {},
               );
             },
           );
