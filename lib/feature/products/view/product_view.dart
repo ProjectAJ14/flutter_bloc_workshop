@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../bloc/product_bloc.dart';
+import '../widgets/product_card.dart';
 
 class ProductView extends StatelessWidget {
   const ProductView({super.key});
@@ -19,10 +20,8 @@ class ProductView extends StatelessWidget {
             itemCount: state.products.length,
             itemBuilder: (context, index) {
               final product = state.products[index];
-              return ListTile(
-                title: Text(product.title),
-                subtitle: Text(product.description),
-                trailing: Text('\$${product.price}'),
+              return ProductCard(
+                product: product,
               );
             },
           );

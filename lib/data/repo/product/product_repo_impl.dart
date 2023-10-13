@@ -8,9 +8,12 @@ class ProductRepoImpl implements ProductRepo {
   @override
   Future<List<ProductModel>> getProducts({String? category}) async {
     try {
-      final url = category != null
-          ? '${ApiPath.getCategoriesProduct}/$category'
-          : ApiPath.getAllCategories;
+      final String url;
+      if (category != null) {
+        url = '${ApiPath.getCategoriesProduct}/$category';
+      } else {
+        url = ApiPath.getAllProducts;
+      }
 
       final response = await apiService.get(path: url);
 
