@@ -15,6 +15,7 @@ class TimerActions extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             ...switch (state) {
+              /// Initial state
               TimerInitialState() => [
                   FloatingActionButton(
                     child: const Icon(Icons.play_arrow),
@@ -23,6 +24,8 @@ class TimerActions extends StatelessWidget {
                         .add(TimerStartedEvent(duration: state.duration)),
                   ),
                 ],
+
+              /// Timer is running
               TimerRunInProgressState() => [
                   FloatingActionButton(
                     child: const Icon(Icons.pause),
@@ -35,6 +38,8 @@ class TimerActions extends StatelessWidget {
                         context.read<TimerBloc>().add(const TimerResetEvent()),
                   ),
                 ],
+
+              /// Pause State
               TimerRunPauseState() => [
                   FloatingActionButton(
                     child: const Icon(Icons.play_arrow),
@@ -48,6 +53,8 @@ class TimerActions extends StatelessWidget {
                         context.read<TimerBloc>().add(const TimerResetEvent()),
                   ),
                 ],
+
+              /// Completed state
               TimerRunCompleteState() => [
                   FloatingActionButton(
                     child: const Icon(Icons.replay),
