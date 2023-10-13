@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_bloc_workshop/features/counter/cubit/counter_cubit.dart';
 
 /// A widget that displays the current count and provides buttons to
 /// increment and decrement it.
@@ -14,12 +12,8 @@ class CounterView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('Counter - Cubit')),
       body: Center(
-        child: BlocBuilder<CounterCubit, int>(
-          builder: (context, state) {
-            return Text('$state',
-                style: textTheme.displayLarge!.copyWith(fontSize: 90));
-          },
-        ),
+        // TODO: Wrap Text with BlocBuilder
+        child: Text('0', style: textTheme.displayLarge!.copyWith(fontSize: 90)),
       ),
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,
@@ -27,12 +21,16 @@ class CounterView extends StatelessWidget {
         children: <Widget>[
           FloatingActionButton(
             child: const Icon(Icons.add),
-            onPressed: () => context.read<CounterCubit>().increment(),
+            onPressed: () {
+              // TODO: Add Increment event here
+            },
           ),
           const SizedBox(height: 8),
           FloatingActionButton(
             child: const Icon(Icons.remove),
-            onPressed: () => context.read<CounterCubit>().decrement(),
+            onPressed: () {
+              // TODO: Add Decrement event here
+            },
           ),
         ],
       ),
