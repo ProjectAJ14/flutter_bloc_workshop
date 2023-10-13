@@ -28,3 +28,14 @@ final class ProductErrorState extends ProductState {
   @override
   List<Object> get props => [message];
 }
+
+final class ProductAddedToCartState extends ProductState {}
+
+final class ProductAddToCartErrorState extends ProductState {
+  final String message;
+
+  const ProductAddToCartErrorState({required this.message});
+
+  @override
+  List<Object> get props => [message];
+}

@@ -22,5 +22,24 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
         emit(ProductErrorState(message: e.toString()));
       }
     });
+
+    on<ProductAddToCartEvent>((event, emit) async {
+      final currentState = state as ProductLoadedState;
+      try {
+        emit(
+          const ProductAddToCartErrorState(
+            message: "Service not available yet",
+          ),
+        );
+      } catch (e) {
+        emit(
+          const ProductAddToCartErrorState(
+            message: "Service not available yet",
+          ),
+        );
+      } finally {
+        emit(currentState);
+      }
+    });
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void addToCartDialog(BuildContext context) {
+void addToCartDialog(BuildContext context, String message) {
   showDialog(
     context: context,
     builder: (context) => AlertDialog(
@@ -13,7 +13,7 @@ void addToCartDialog(BuildContext context) {
         ],
       ),
       content: Text(
-        'Service not available yet',
+        message,
         style: Theme.of(context).textTheme.bodyLarge,
       ),
       actions: [

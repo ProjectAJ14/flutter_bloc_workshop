@@ -15,3 +15,12 @@ class ProductFetchEvent extends ProductEvent {
   @override
   List<Object> get props => [];
 }
+
+class ProductAddToCartEvent extends ProductEvent {
+  final ProductModel product;
+
+  const ProductAddToCartEvent({required this.product});
+
+  @override
+  List<Object> get props => [];
+}

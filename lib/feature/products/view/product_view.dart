@@ -10,7 +10,12 @@ class ProductView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<ProductBloc, ProductState>(
+    return BlocConsumer<ProductBloc, ProductState>(
+      listener: (context, state) {
+        if (state is ProductAddToCartErrorState) {
+          addToCartDialog(context, state.message);
+        }
+      },
       builder: (context, state) {
         if (state is ProductLoadingState) {
           return const Center(
@@ -28,7 +33,9 @@ class ProductView extends StatelessWidget {
               return ProductCard(
                 product: product,
                 addToCart: () {
-                  addToCartDialog(context);
+                  context.read<ProductBloc>().add(
+                        ProductAddToCartEvent(product: product),
+                      );
                 },
               );
             },
