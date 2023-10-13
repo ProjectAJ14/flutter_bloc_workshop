@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'bloc/product_bloc.dart';
 import 'view/product_view.dart';
 
 class ProductScreen extends StatelessWidget {
@@ -14,17 +12,13 @@ class ProductScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) =>
-          ProductBloc()..add(ProductFetchEvent(category: category)),
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text(category),
-        ),
-        body: const Padding(
-          padding: EdgeInsets.all(20.0),
-          child: ProductView(),
-        ),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(category),
+      ),
+      body: const Padding(
+        padding: EdgeInsets.all(20.0),
+        child: ProductView(),
       ),
     );
   }
