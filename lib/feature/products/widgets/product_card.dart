@@ -46,11 +46,13 @@ class ProductCard extends StatelessWidget {
               ],
             ),
           ),
-          Text(
-            product.title,
-            style: Theme.of(context).textTheme.titleMedium,
-            maxLines: 2,
-            textAlign: TextAlign.center,
+          Expanded(
+            child: Text(
+              product.title,
+              style: Theme.of(context).textTheme.titleMedium,
+              maxLines: 2,
+              textAlign: TextAlign.center,
+            ),
           ),
           const SizedBox(height: 8),
           ElevatedButton(
@@ -65,6 +67,7 @@ class ProductCard extends StatelessWidget {
               style: TextStyle(color: Colors.white),
             ),
           ),
+          const SizedBox(height: 8),
         ],
       ),
     );
