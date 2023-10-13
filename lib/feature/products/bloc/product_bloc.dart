@@ -28,13 +28,13 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
       try {
         emit(
           const ProductAddToCartErrorState(
-            message: "Service not available yet",
+            message: "Service not available yet!!!",
           ),
         );
       } catch (e) {
         emit(
           const ProductAddToCartErrorState(
-            message: "Service not available yet",
+            message: "Service not available yet!!!",
           ),
         );
       } finally {
