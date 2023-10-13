@@ -17,6 +17,9 @@ dependencies:
   bloc: ^8.1.2
   get_it: ^7.6.4
   equatable: ^2.0.5
+  dio: ^5.3.3
+  talker_bloc_logger: ^2.2.0
+  talker_dio_logger: ^2.3.0
 
 dev_dependencies:
   flutter_test:

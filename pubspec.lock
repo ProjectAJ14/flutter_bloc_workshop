@@ -17,6 +17,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.13.0"
+  ansicolor:
+    dependency: transitive
+    description:
+      name: ansicolor
+      sha256: "607f8fa9786f392043f169898923e6c59b4518242b68b8862eb8a8b7d9c30b4a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.1"
   args:
     dependency: transitive
     description:
@@ -121,6 +129,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.4.1"
+  dio:
+    dependency: "direct main"
+    description:
+      name: dio
+      sha256: "417e2a6f9d83ab396ec38ff4ea5da6c254da71e4db765ad737a42af6930140b7"
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.3.3"
   equatable:
     dependency: "direct main"
     description:
@@ -424,6 +440,38 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
+  talker:
+    dependency: transitive
+    description:
+      name: talker
+      sha256: e0cb07e0bcab6045b86761593ff6f1878b335bfc1978ba48415d0968af68d81e
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.3"
+  talker_bloc_logger:
+    dependency: "direct main"
+    description:
+      name: talker_bloc_logger
+      sha256: "8d5f7d332fbae5f2f4e72a4a9617cc2ed1f9f8121254907ab68841584291a11b"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.0"
+  talker_dio_logger:
+    dependency: "direct main"
+    description:
+      name: talker_dio_logger
+      sha256: b3bd0b009b8ba1f941de3b49c94a7e4d0b8bcfccbc0e261c19549a04a6ad9043
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.3.0"
+  talker_logger:
+    dependency: transitive
+    description:
+      name: talker_logger
+      sha256: "3f8d051e5821c4aa3c27efe8204829dde128724cbd0294ae3cee76b097cf2cbb"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.0"
   term_glyph:
     dependency: transitive
     description:
