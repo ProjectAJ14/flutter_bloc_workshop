@@ -13,19 +13,19 @@ class CategoriesView extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<CategoriesBloc, CategoriesState>(
       builder: (context, state) {
-        if (state is CategoriesInitialEvent) {
+        if (state is CategoriesInitialState) {
           return const Center(
             child: CircularProgressIndicator(),
           );
         }
 
-        if (state is CategoriesLoadingEvent) {
+        if (state is CategoriesLoadingState) {
           return const Center(
             child: CircularProgressIndicator(),
           );
         }
 
-        if (state is CategoriesSuccessEvent) {
+        if (state is CategoriesSuccessState) {
           return GridView.builder(
             itemCount: state.categories.length,
             gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(

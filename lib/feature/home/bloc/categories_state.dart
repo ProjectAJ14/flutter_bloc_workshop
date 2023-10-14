@@ -7,14 +7,14 @@ sealed class CategoriesState extends Equatable {
   List<Object> get props => [];
 }
 
-final class CategoriesInitialEvent extends CategoriesState {}
+final class CategoriesInitialState extends CategoriesState {}
 
-final class CategoriesLoadingEvent extends CategoriesState {}
+final class CategoriesLoadingState extends CategoriesState {}
 
-final class CategoriesSuccessEvent extends CategoriesState {
+final class CategoriesSuccessState extends CategoriesState {
   final List<String> categories;
 
-  const CategoriesSuccessEvent(this.categories);
+  const CategoriesSuccessState(this.categories);
 
   @override
   List<Object> get props => [categories];

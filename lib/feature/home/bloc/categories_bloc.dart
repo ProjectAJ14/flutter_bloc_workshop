@@ -8,14 +8,14 @@ part 'categories_event.dart';
 part 'categories_state.dart';
 
 class CategoriesBloc extends Bloc<CategoriesEvent, CategoriesState> {
-  CategoriesBloc() : super(CategoriesInitialEvent()) {
+  CategoriesBloc() : super(CategoriesInitialState()) {
     on<CategoriesFetchEvent>((event, emit) async {
-      emit(CategoriesLoadingEvent());
+      emit(CategoriesLoadingState());
 
       try {
         final categories = await productRepo.getAllCategories();
 
-        emit(CategoriesSuccessEvent(categories));
+        emit(CategoriesSuccessState(categories));
       } on RepoException catch (e) {
         emit(CategoriesErrorEvent(e.message));
       } catch (e) {
