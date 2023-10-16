@@ -33,6 +33,30 @@ lib/data - Contains the data layer code (Repository, API, Database)
 lib/feature - Contains the feature-specific code 
 lib/utils - Contains the utility code
 
+
+## Branches
+
+Initial Setup
+    step-1: flutter setup with dependencies 
+
+Counter App
+
+    step-2.0: initial setup for cubit 
+    step-2.1- completed setup for cubit
+
+Timer App
+
+    step-3.0: initial setup for  bloc
+    step-3.1- completed setup for bloc
+    step-3.2: example app with test cases without Expect
+    step-3.3: example app with completed test cases 
+
+Product App
+
+    step-4.0: folder structure and files for app
+    step-4.1: code for bloc and UI without connections
+    step-4.2: complete code
+
 ## Counter App 
 
 Branch: step-2.1
