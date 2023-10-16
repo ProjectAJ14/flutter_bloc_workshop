@@ -25,20 +25,20 @@ git checkout <branch-name>
 
 ## Introduction
 
-All the project have a common structure. The project structure is as follows:
+All the projects have a common structure. The project structure is as follows:
 
 ```
 lib
-lib/app - Contains the application specific code
+lib/app - Contains the application-specific code
 lib/data - Contains the data layer code (Repository, API, Database)
-lib/feature - Contains the feature specific code 
+lib/feature - Contains the feature-specific code 
 lib/utils - Contains the utility code
 
 ## Counter App 
 
 Branch: step-2.1
 
-This is a simple counter app that uses cubit to manage the state.
+This is a simple counter app that uses a cubit to manage the state.
 
 <img width="612" alt="Cubit Example" src="https://github.com/ProjectAJ14/flutter_bloc_workshop/assets/48622446/2ffc5b46-1e1b-45a2-adc1-65ce71b51f3b">
 
@@ -46,13 +46,20 @@ This is a simple counter app that uses cubit to manage the state.
 
 Branch: step-3.3
 
-This is a simple timer app that uses bloc to manage the state. It also uses bloc_test to test the bloc.
-Also written a custom bloc observer to log the state changes.
+This is a simple timer app that uses Bloc to manage the state. It also uses bloc_test to test the bloc.
+Also, a custom bloc observer to log the state changes.
 
+<img width="612" alt="Bloc Example 1" src="https://github.com/ProjectAJ14/flutter_bloc_workshop/assets/48622446/67788c25-1c89-478a-9318-452df49afb42">
+<img width="612" alt="Bloc Example 2" src="https://github.com/ProjectAJ14/flutter_bloc_workshop/assets/48622446/fe8a101d-cb7c-4722-9762-90933344da75">
 
 ## Product App
 
 Branch: step-4.2
 
-This app has MVVM architecture using bloc. This app has two screens - Categories and Product list. The app uses bloc to manage the state. It also uses go_route to navigate between the screens.
+This app has MVVM architecture using bloc. This app has two screens - Categories and Product List. The app uses the bloc to manage the state. It also uses go_route to navigate between the screens.
+
+<img width="612" alt="App 2" src="https://github.com/ProjectAJ14/flutter_bloc_workshop/assets/48622446/9ec0401e-6dfd-49a7-bf15-0706d14b69bb">
+<img width="612" alt="App 1" src="https://github.com/ProjectAJ14/flutter_bloc_workshop/assets/48622446/25c63362-9952-4a30-8314-79d1e88bbeb9">
+
+
 
