@@ -27,7 +27,6 @@ git checkout <branch-name>
 
 All the projects have a common structure. The project structure is as follows:
 
-```
 lib
 lib/app - Contains the application-specific code
 lib/data - Contains the data layer code (Repository, API, Database)
