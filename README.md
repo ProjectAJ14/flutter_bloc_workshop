@@ -40,7 +40,7 @@ Branch: step-2.1
 
 This is a simple counter app that uses cubit to manage the state.
 
-![Cubit Example](https://github.com/ProjectAJ14/flutter_bloc_workshop/blob/step-4.2/ss/Cubit_Example.png)
+<img width="612" alt="Cubit Example" src="https://github.com/ProjectAJ14/flutter_bloc_workshop/assets/48622446/2ffc5b46-1e1b-45a2-adc1-65ce71b51f3b">
 
 ## Timer App
 
