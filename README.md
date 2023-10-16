@@ -49,8 +49,10 @@ Branch: step-3.3
 This is a simple timer app that uses bloc to manage the state. It also uses bloc_test to test the bloc.
 Also written a custom bloc observer to log the state changes.
 
-![Bloc Example](ss/Bloc_Example_1.png)
-![Bloc Example](ss/Bloc_Example_2.png)
 
+## Product App
 
+Branch: step-4.2
+
+This app has MVVM architecture using bloc. This app has two screens - Categories and Product list. The app uses bloc to manage the state. It also uses go_route to navigate between the screens.
 
