@@ -3,6 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../app/route/routes/route_path.dart';
+import '../../utils/theme/app_theme.dart';
+import '../../utils/theme/ct_theme.dart';
 import 'bloc/categories_bloc.dart';
 import 'view/categories_view.dart';
 import 'widgets/categories_card.dart';
@@ -15,6 +17,7 @@ class HomeScreen extends StatelessWidget {
     return BlocProvider<CategoriesBloc>(
       create: (_) => CategoriesBloc()..add(const CategoriesFetchEvent()),
       child: Scaffold(
+        backgroundColor: CTheme.of(context).theme.background,
         appBar: AppBar(
           title: const Text('Home'),
         ),
@@ -22,6 +25,24 @@ class HomeScreen extends StatelessWidget {
           padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
+              Container(
+                height: 40,
+                width: 80,
+                decoration: BoxDecoration(
+                  gradient: CTheme.of(context).theme.primaryGradient,
+                ),
+              ),
+              MaterialButton(
+                onPressed: () {
+                  CTheme.of(context).changeTheme(
+                    CTheme.of(context).theme == AppTheme.light()
+                        ? AppTheme.dark()
+                        : AppTheme.light(),
+                  );
+                },
+                color: Theme.of(context).colorScheme.onSurface,
+                child: const Text("CHange Theme"),
+              ),
               SizedBox(
                 height: 100,
                 child: CategoryCard(

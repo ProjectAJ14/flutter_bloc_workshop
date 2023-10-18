@@ -19,7 +19,9 @@ class ProductScreen extends StatelessWidget {
           ProductBloc()..add(ProductFetchEvent(category: category)),
       child: Scaffold(
         appBar: AppBar(
-          title: Text(category),
+          title: Text(
+            category,
+          ),
         ),
         body: const Padding(
           padding: EdgeInsets.all(20.0),

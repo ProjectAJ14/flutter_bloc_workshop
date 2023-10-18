@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../utils/theme/ct_theme.dart';
 import '../bloc/product_bloc.dart';
 import '../dialog/add_to_cart_dialog.dart';
 import '../widgets/product_card.dart';
@@ -22,23 +23,26 @@ class ProductView extends StatelessWidget {
             child: CircularProgressIndicator(),
           );
         } else if (state is ProductLoadedState) {
-          return GridView.builder(
-            itemCount: state.products.length,
-            gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-              maxCrossAxisExtent: 240,
-              childAspectRatio: 0.6,
+          return Container(
+            color: CTheme.of(context).theme.background,
+            child: GridView.builder(
+              itemCount: state.products.length,
+              gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                maxCrossAxisExtent: 240,
+                childAspectRatio: 0.6,
+              ),
+              itemBuilder: (context, index) {
+                final product = state.products[index];
+                return ProductCard(
+                  product: product,
+                  addToCart: () {
+                    context.read<ProductBloc>().add(
+                          ProductAddToCartEvent(product: product),
+                        );
+                  },
+                );
+              },
             ),
-            itemBuilder: (context, index) {
-              final product = state.products[index];
-              return ProductCard(
-                product: product,
-                addToCart: () {
-                  context.read<ProductBloc>().add(
-                        ProductAddToCartEvent(product: product),
-                      );
-                },
-              );
-            },
           );
         } else if (state is ProductErrorState) {
           return const Center(
