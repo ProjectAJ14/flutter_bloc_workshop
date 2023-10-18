@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../app/route/routes/route_path.dart';
+import '../../custom_icons.dart';
 import '../../utils/theme/app_theme.dart';
 import '../../utils/theme/ct_theme.dart';
 import 'bloc/categories_bloc.dart';
@@ -41,7 +42,14 @@ class HomeScreen extends StatelessWidget {
                   );
                 },
                 color: Theme.of(context).colorScheme.onSurface,
-                child: const Text("CHange Theme"),
+                child: const Row(
+                  children: [
+                    Icon(
+                      CustomIcons.edit_square,
+                    ),
+                    Text("CHange Theme"),
+                  ],
+                ),
               ),
               SizedBox(
                 height: 100,
